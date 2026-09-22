@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="ΑΣΠΙΔΑ — aspidha shield with alpha">
+  <title>ΑΣΠΙΔΑ · Bulletproof Prompt Forge</title>
+  <defs>
+    <clipPath id="tile"><rect x="0" y="0" width="512" height="512" rx="118"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#tile)">
+    <!-- ground -->
+    <rect width="512" height="512" fill="#0f1428"/>
+    <rect width="512" height="512" fill="none"/>
+
+    <!-- the aspidha: a Greek hoplite shield, gold, filling the tile -->
+    <path d="M256 52 C 306 88 356 104 414 110 C 414 252 380 372 256 470 C 132 372 98 252 98 110 C 156 104 206 88 256 52 Z"
+          fill="#d9b451"/>
+
+    <!-- the alpha, cut out of the shield: two tapered strokes and a bar -->
+    <path d="M247 128 L271 128 L212 392 L186 392 Z" fill="#0f1428"/>
+    <path d="M265 128 L289 128 L332 392 L306 392 Z" fill="#0f1428"/>
+    <path d="M196 392 L238 392 L246 356 L188 356 Z" fill="#0f1428"/>
+    <path d="M274 392 L316 392 L324 356 L266 356 Z" fill="#0f1428"/>
+    <rect x="196" y="286" width="120" height="18" rx="5" fill="#0f1428"/>
+
+    <!-- the nib: the writing tool inside the counter of the alpha -->
+    <path d="M256 168 L276 214 L256 272 L236 214 Z" fill="#d9b451"/>
+    <circle cx="256" cy="212" r="7" fill="#0f1428"/>
+    <path d="M256 272 L262 292 L256 302 L250 292 Z" fill="#d9b451"/>
+  </g>
+</svg>

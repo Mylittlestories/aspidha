@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="ΑΣΠΙΔΑ">
+  <title>ΑΣΠΙΔΑ — favicon (μικρό μέγεθος: το Α διαβάζεται από τα 16 px)</title>
+  <defs><clipPath id="t"><rect width="512" height="512" rx="110"/></clipPath></defs>
+  <g clip-path="url(#t)">
+    <rect width="512" height="512" fill="#0f1428"/>
+    <path d="M256 62 C 302 100 350 116 406 122 C 406 258 374 366 256 456 C 138 366 106 258 106 122 C 162 116 210 100 256 62 Z" fill="#d9b451"/>
+    <path d="M243 122 L275 122 L206 400 L172 400 Z" fill="#0f1428"/>
+    <path d="M269 122 L301 122 L352 400 L318 400 Z" fill="#0f1428"/>
+    <path d="M181 400 L232 400 L242 358 L167 358 Z" fill="#0f1428"/>
+    <path d="M280 400 L331 400 L340 358 L265 358 Z" fill="#0f1428"/>
+    <rect x="180" y="280" width="152" height="22" rx="6" fill="#0f1428"/>
+  </g>
+</svg>
