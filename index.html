@@ -1,8 +1,8 @@
 <!--
   ══════════════════════════════════════════════════════════════════════════════════
-  🛡️  ΑΣΠΙΔΑ — Bulletproof Prompt Forge · Έκδοση v5.5  ·  build TT  ·  2026-09-22
+  🛡️  ΑΣΠΙΔΑ — Bulletproof Prompt Forge · Έκδοση v5.6  ·  build UU  ·  2026-09-22
   ──────────────────────────────────────────────────────────────────────────────────
-  Επαλήθευση κατασκευής: 551 έλεγχοι, 0 αποτυχίες (σουίτα `rev.js`, 49 ενότητες)
+  Επαλήθευση κατασκευής: 569 έλεγχοι, 0 αποτυχίες (σουίτα `rev.js`, 50 ενότητες)
   Μονό αρχείο · χωρίς εξωτερικές εξαρτήσεις · δουλειά χωρίς σύνδεση
   Σήμα: ΧΡΥΣΗ ΑΣΠΙΔΑ με κομμένο Α και πένα γραφής — ΕΝΣΩΜΑΤΩΜΕΝΟ στο αρχείο σε πέντε μεγέθη
   (favicon 16/32, apple-touch 180, λογότυπο κεφαλίδας 192, manifest 192/512) ως PNG8· το σχήμα
@@ -22,7 +22,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🛡️ ΑΣΠΙΔΑ v5.5 — Bulletproof Prompt Forge · Zero-Drift Speculative Writing</title>
+<title>🛡️ ΑΣΠΙΔΑ v5.6 — Bulletproof Prompt Forge · Zero-Drift Speculative Writing</title>
 <!-- ΤΟ ΣΗΜΑ ΕΙΝΑΙ ΜΕΣΑ ΣΤΟ ΑΡΧΕΙΟ (data URI): χρυσή ασπίδα οπλίτη με κομμένο Α και πένα,
      σε χαρτί — το ίδιο χρώμα με τη φωτεινή διεπαφή, ώστε το εικονίδιο να μη «κάθεται» σαν
      ξένο σώμα. Το 32/16 κρατούν πιο χοντρό Α (στις μικρές διαστάσεις η λεπτή γραμμή χάνεται),
@@ -37,7 +37,7 @@
 <link rel="canonical" href="https://Mylittlestories.github.io/aspidha/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ΑΣΠΙΔΑ · Aspidha">
-<meta property="og:title" content="🛡️ ΑΣΠΙΔΑ v5.5 — Bulletproof Prompt Forge">
+<meta property="og:title" content="🛡️ ΑΣΠΙΔΑ v5.6 — Bulletproof Prompt Forge">
 <meta property="og:description" content="Γεννήτρια prompt για μυθιστόρημα: ονόματα, κόσμος, μέτρηση ύφους, λογιστήριο συνέχειας, επιμέλεια. Ένα αρχείο, χωρίς σύνδεση.">
 <meta property="og:url" content="https://Mylittlestories.github.io/aspidha/">
 <meta property="og:image" content="https://Mylittlestories.github.io/aspidha/assets/og-image.png">
@@ -45,7 +45,7 @@
 <meta property="og:image:height" content="640">
 <meta property="og:locale" content="el_GR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="🛡️ ΑΣΠΙΔΑ v5.5 — Bulletproof Prompt Forge">
+<meta name="twitter:title" content="🛡️ ΑΣΠΙΔΑ v5.6 — Bulletproof Prompt Forge">
 <meta name="twitter:image" content="https://Mylittlestories.github.io/aspidha/assets/og-image.png">
 <style>
   /* ══════════════════════════════════════════════════════════════════════════════
@@ -187,6 +187,10 @@
   .out-body::-webkit-scrollbar,.selftest::-webkit-scrollbar{width:11px;height:11px}
   .out-body::-webkit-scrollbar-thumb,.selftest::-webkit-scrollbar-thumb{background:#cfc6ae;border-radius:8px;border:3px solid var(--panel)}
   body.dark .out-body::-webkit-scrollbar-thumb,body.dark .selftest::-webkit-scrollbar-thumb{background:#33405f;border-color:var(--panel)}
+  pre.gate-cont{
+    background:var(--code-bg); color:var(--code); border:1px solid var(--border); border-radius:10px;
+    padding:12px 14px; margin-top:10px; white-space:pre-wrap; font-size:.82rem; line-height:1.5; max-height:460px; overflow:auto;
+  }
   pre#promptOut{white-space:pre-wrap;word-wrap:break-word;font-family:'Cascadia Code','Consolas','Monaco',monospace;
     font-size:.79rem;line-height:1.6;color:var(--code);margin:0}
   .out-body pre{user-select:text;-webkit-user-select:text;cursor:text}
@@ -331,7 +335,7 @@
 
 <header style="position:relative">
   <button class="theme-btn" id="themeBtn" type="button" title="Άλλαξε σε σκούρη διεπαφή">🌙 Σκοτεινό</button>
-  <h1><img class="logo" src="data:image/png;base64,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" alt="Εικονίδιο ΑΣΠΙΔΑΣ" width="42" height="42"> <span class="accent">ΑΣΠΙΔΑ</span> <span class="badge" id="verBadge" title="Έκδοση εργαλείου">v5.5</span></h1>
+  <h1><img class="logo" src="data:image/png;base64,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" alt="Εικονίδιο ΑΣΠΙΔΑΣ" width="42" height="42"> <span class="accent">ΑΣΠΙΔΑ</span> <span class="badge" id="verBadge" title="Έκδοση εργαλείου">v5.6</span></h1>
   <p class="brandsub"><span id="brandSub">Bulletproof Prompt Forge</span></p>
   <p>Zero-Drift Architecture · Author Voice DNA (μετρημένο ύφος) · Name Forge · Blacklist Inspector · Continuity Ledger · Μνήμη Έργου · Μουσικές Ιστορίες · Αναζήτηση στο Σώμα</p>
   <p class="brandsub" style="margin-top:8px;letter-spacing:0;text-transform:none;font-weight:400">
@@ -684,7 +688,7 @@
 
     <div class="output">
       <div class="output-head">
-        <h2>📜 Παραγόμενο Prompt (Zero-Drift <span id="verOut">v5.5</span>)</h2>
+        <h2>📜 Παραγόμενο Prompt (Zero-Drift <span id="verOut">v5.6</span>)</h2>
         <div>
           <span class="badge" id="wordCount">0 λέξεις</span>
           <span class="badge" id="charCount">0 χαρακτήρες</span>
@@ -960,7 +964,12 @@
         <button class="btn secondary" id="gateCopy" style="display:none" onclick="copyText('gateOut','την αναφορά της πύλης')">📋 Αντίγραφο αναφοράς</button>
         <button class="btn secondary" onclick="downloadText('gate-report.md','gateOut','text/markdown;charset=utf-8')">⬇ Αναφορά .md</button>
         <button class="btn secondary" onclick="gateToPrompt()">➡️ Στείλε τις διορθώσεις στο κείμενο</button>
+        <button class="btn" onclick="renderContinuation()">📝 Οδηγίες συνέχειας ανά κεφάλαιο</button>
+        <button class="btn secondary" id="contCopy" style="display:none" onclick="copyText('contOut','τις οδηγίες συνέχειας')">📋 Αντίγραφο οδηγιών</button>
+        <button class="btn secondary" id="contDl" style="display:none" onclick="downloadText('odigies-synexeias.md','contOut','text/markdown;charset=utf-8')">⬇ Οδηγίες .md</button>
+        <button class="btn secondary" id="contSend" style="display:none" onclick="contToPrompt()">➡ Μπλοκ οδηγιών στο κείμενο</button>
       </div>
+      <pre id="contOut" class="gate-cont" style="display:none"></pre>
       <div id="gateOut" style="margin-top:12px"><p class="hint">Επικόλλησε το χειρόγραφο στο πεδίο «Καθαρογράφημα» παρακάτω, ύστερα πάτησε «🛡 Έλεγξε το παραδοτέο».</p></div>
     </div>
     <div class="card" style="grid-column:1/-1">
@@ -1085,7 +1094,7 @@ const GR='α-ωάέήίόύώϊϋΐΰ';
    στατικός τίτλος παλιάς έκδοσης ενώ το εργαλείο έχει προχωρήσει: η επαλήθευση ελέγχει ότι
    καμία παλιά έκδοση δεν εμφανίζεται πουθενά στο αρχείο.
    ═══════════════════════════════════════════════════════════════════════ */
-const APP_VER='5.5';
+const APP_VER='5.6';
 const APP_DATE='2026-09-22';
 /* ═══ ΕΛΑΧΙΣΤΟ ΜΗΚΟΣ ΑΝΑ ΦΟΡΜΑ ═══
    Γιατί εδώ: το prompt έλεγε «ΔΙΗΓΗΜΑ (3.000–8.000 λέξεις)» και πουθενά δεν ζητούσε μέτρηση.
@@ -1100,10 +1109,10 @@ function lenUnitText(){
   const k=lenKey(), u=LEN_UNIT[k]||['πράξεις','5'], n=parseInt(u[1],10);
   return u[1]+' '+u[0]+' × ≥'+Math.round((LEN_MIN[k]||3000)/n).toLocaleString('el-GR')+' λέξεις';
 }
-const APP_CHECKS='551';
+const APP_CHECKS='569';
 /* ΑΝΑΓΝΩΡΙΣΤΙΚΟ ΚΑΤΑΣΚΕΥΗΣ: αλλάζει με κάθε patch ώστε ο χρήστης να μπορεί να πει
    ΠΟΙΟ αρχείο βλέπει. Αν στην οθόνη του γράφει άλλο build, βλέπει παλιό HTML (cache). */
-const APP_BUILD='TT';
+const APP_BUILD='UU';
 /* ── ΠΙΝΑΚΑΣ ΟΡΙΩΝ: Η ΜΟΝΗ ΠΗΓΗ ΓΙΑ ΚΑΘΕ ΝΟΥΜΕΡΟ ──
    Γιατί υπάρχει: το prompt έδινε για το ίδιο πράγμα δύο νούμερα (45% και 35% για τις ετικέτες
    διαλόγου, ≥20% και ≥12% για τον διάλογο, «ανά σελίδα» και «ανά κεφάλαιο» για τις μεγάλες
@@ -2231,6 +2240,142 @@ function manuscriptGate(rawIn){
   return {verdict:verdict, blockers:blockers, warns:warns, passes:passes, rows:rows,
           words:words, chapters:realChapters, cut:cut, target:per, targetNote:unit,
           targetTotal:(typeof lenMinWords==='function')?lenMinWords():0};
+}
+/* ── ΟΙ ΟΔΗΓΙΕΣ ΣΥΝΕΧΕΙΑΣ ΑΝΑ ΚΕΦΑΛΑΙΟ ───────────────────────────────────────────
+   Δεν λένε «γράψε παραπάνω». Λένε ΠΟΙΟ κεφάλαιο, ΠΟΣΕΣ λέξεις λείπουν, ΜΕ ΤΙ ΡΥΘΜΟ, τι πρέπει
+   να προστεθεί (παράγραφος-αναπνοή, διάλογος), τι πρέπει να μείνει όπως είναι (πρόσωπο, χρόνος,
+   κλειδωμένα ονόματα) και τι απαγορεύεται (σύνοψη, νέα σκηνή, επανάληψη). Κάθε μπλοκ στέκει
+   μόνο του: το επικολλάς στο μοντέλο και δουλεύει χωρίς άλλο πλαίσιο.
+   ΤΑΞΙΝΟΜΗΣΗ: πρώτα ό,τι έχει το μεγαλύτερο έλλειμμα — το πρώτο κλικ πιάνει το χειρότερο. */
+function continuationPlan(rawIn){
+  const raw=String(rawIn||'');
+  const cut=editStripTail(raw);
+  const g=manuscriptGate(raw);
+  const rows=g.rows;
+  const UNIT=['ΚΕΦΑΛΑΙΟ','ΜΕΡΟΣ','ΠΡΑΞΗ','ΤΟΜΟΣ'];
+  const nf=x=>Number(x).toLocaleString('el-GR');
+  const T=x=>String(x).replace('.',',');
+  const ref=LIMITS.sentLenRef||13.6;
+  const words=rows.reduce((a,r)=>a+r.words,0);
+  /* ΤΟ ΠΡΟΣΩΠΟ ΚΑΙ Ο ΧΡΟΝΟΣ ΤΟΥ ΕΡΓΟΥ: η πλειονότητα — σ' αυτήν επιστρέφει η εξαίρεση. */
+  const seen=rows.filter(r=>UNIT.indexOf(r.kind)>-1&&r.words>=80);
+  const dist=k=>{ const d={}; seen.forEach(r=>{ if(r[k]&&r[k]!=='ασαφές')d[r[k]]=(d[r[k]]||0)+1; });
+                  return Object.keys(d).sort((a,b)=>d[b]-d[a])[0]||''; };
+  const mainPov=dist('pov'), mainTense=dist('tense');
+  const cfg=contractNamesFrom(raw);
+  const names=cfg.slice(0,10).join(', ');
+  const items=[];
+  rows.forEach(r=>{
+    if(UNIT.indexOf(r.kind)===-1)return;                 /* τα παραρτήματα δεν φορτώνονται με στόχο */
+    const target=(typeof editUnitTarget==='function'?editUnitTarget(r.kind):r.target)||0;
+    const need=Math.max(0,target-r.words);
+    const notes=[];
+    if(need>0)notes.push('λέξεις');
+    if(r.words>=150&&!r.p6)notes.push('πνοή');
+    if(r.mean&&(r.mean<ref*0.6||r.mean>ref*1.6))notes.push('ρυθμός');
+    if(r.pov&&r.pov!=='ασαφές'&&mainPov&&r.pov!==mainPov)notes.push('πρόσωπο');
+    if(r.tense&&r.tense!=='ασαφές'&&mainTense&&r.tense!==mainTense)notes.push('χρόνος');
+    if(r.dialog<LIMITS.dialogue&&r.words>=150)notes.push('διάλογος');
+    if(!notes.length)return;                             /* τίποτα να ζητηθεί — δεν γεμίζουμε χαρτί */
+    items.push({label:r.label, kind:r.kind, words:r.words, target:target, need:need,
+                p6:r.p6, mean:r.mean, pov:r.pov, tense:r.tense, dialog:r.dialog,
+                names:r.names, notes:notes});
+  });
+  items.sort((a,b)=>b.need-a.need);
+  const L=[];
+  if(!items.length){
+    L.push('✓ ΔΕΝ ΕΚΚΡΕΜΕΙ ΣΥΝΕΧΕΙΑ.');
+    L.push('');
+    L.push('Όλες οι ενότητες ('+seen.length+') πιάνουν τον στόχο, έχουν παράγραφο-αναπνοή, ο ρυθμός τους κρατά το συμβόλαιο, το πρόσωπο και ο χρόνος δεν σπάνε. Δεν υπάρχει κεφάλαιο να «συνεχίσεις»: το επόμενο βήμα είναι η επιμέλεια, όχι η παραγωγή.');
+    if(cfg.length)L.push('Κλειδωμένα ονόματα που πρέπει να μείνουν ακριβώς έτσι (με τις κλίσεις τους): '+names+'.');
+    return {text:L.join('\n'), items:items, words:words, ok:true};
+  }
+  L.push('ΟΔΗΓΙΕΣ ΣΥΝΕΧΕΙΑΣ ΑΝΑ ΚΕΦΑΛΑΙΟ — '+items.length+' από '+seen.length+' ενότητες θέλουν δουλειά.');
+  L.push('Επικόλλησε στο μοντέλο ΟΛΟΚΛΗΡΟ το μπλοκ που σε ενδιαφέρει, μαζί με το κεφάλαιό του. Ένα τη');
+  L.push('φορά: κάθε μπλοκ στέκει μόνο του, με τα δικά του νούμερα, χωρίς άλλο πλαίσιο.');
+  L.push('');
+  items.forEach((it,i)=>{
+    /* ΤΟ ΟΝΟΜΑ ΣΤΗ ΓΡΑΜΜΗ ΣΥΝΕΧΕΙΑΣ: ζητείται «κεφάλαιο όγδοο», όχι «ταμείο» — η ταυτότητα
+       της ενότητας, όχι η τελευταία λέξη του τίτλου της. */
+    /* Η ΤΑΥΤΟΤΗΤΑ ΤΗΣ ΕΝΟΤΗΤΑΣ: «κεφάλαιο τρίτο», «μέρος δεύτερο» — όπως το ονομάζει ο συγγραφέας
+       στο περιθώριο. Ποτέ η τελευταία λέξη του τίτλου («ταμείο»), ποτέ διπλό πρόθεμα. */
+    /* Η ΤΑΥΤΟΤΗΤΑ ΤΗΣ ΕΝΟΤΗΤΑΣ: «κεφάλαιο τρίτο», «μέρος δεύτερο». Ο τόνος δεν χάνεται — τα
+       κεφαλαία δεν τον έχουν, τα πεζά τον θέλουν· τακτικό λέξη προς λέξη, όχι toLowerCase. */
+    const lw=String(it.label).split(/\s+/);
+    const TAG_PREF={ΚΕΦΑΛΑΙΟ:'κεφάλαιο',ΜΕΡΟΣ:'μέρος',ΠΡΑΞΗ:'πράξη',ΤΟΜΟΣ:'τόμος'};
+    const TAG_NUM={ΠΡΩΤΟ:'πρώτο',ΔΕΥΤΕΡΟ:'δεύτερο',ΤΡΙΤΟ:'τρίτο',ΤΕΤΑΡΤΟ:'τέταρτο',ΠΕΜΠΤΟ:'πέμπτο',
+      ΕΚΤΟ:'έκτο',ΕΒΔΟΜΟ:'έβδομο',ΟΓΔΟΟ:'όγδοο',ΕΝΑΤΟ:'ένατο',ΔΕΚΑΤΟ:'δέκατο',ΕΝΔΕΚΑΤΟ:'ενδέκατο',ΔΩΔΕΚΑΤΟ:'δωδέκατο'};
+    const U=s=>String(s).toUpperCase();
+    const tag=(TAG_PREF[U(lw[0])]&&lw[1])?(TAG_PREF[U(lw[0])]+' '+(TAG_NUM[U(lw[1])]||lw[1].toLowerCase()))
+                                       :('ενότητα '+(TAG_NUM[U(lw.slice(-1)[0])]||lw.slice(-1)[0].toLowerCase()));
+    L.push('── '+(i+1)+'. '+it.label+(it.need?('  ['+nf(it.words)+'/'+nf(it.target)+' λέξεις'+
+      (it.target?' · '+Math.round(100*it.words/it.target)+'%':'')+']'):'  ['+nf(it.words)+' λέξεις]')+' ──');
+    const s=[];
+    if(it.need>0)
+      s.push('ΣΥΝΕΧΕΙΑ «'+it.label+'»: έχεις δώσει '+nf(it.words)+' λέξεις από τις '+nf(it.target)+
+             '. Γράψε ακόμη '+nf(it.need)+' λέξεις ΤΗΣ ΙΔΙΑΣ ΣΚΗΝΗΣ — όχι σύνοψη, όχι νέα σκηνή, όχι επανάληψη όσων έχεις γράψει.');
+    else
+      s.push('ΔΙΟΡΘΩΣΗ «'+it.label+'» ('+nf(it.words)+' λέξεις, ο στόχος μήκους καλύφθηκε): μην προσθέσεις έκταση — διόρθωσε μόνο ό,τι ζητείται πιο κάτω, στην ίδια έκταση.');
+    if(it.notes.indexOf('πρόσωπο')>-1)
+      s.push('ΤΟ ΠΡΟΣΩΠΟ: το έργο είναι στο '+mainPov+' πρόσωπο και αυτή η ενότητα γύρισε σε '+it.pov+
+             '. Γύρνα το πίσω στο '+mainPov+' — ή δήλωσε την αλλαγή μέσα στο κείμενο, αν είναι σκηνοθεσία.');
+    else if(mainPov)
+      s.push('Κράτα το '+mainPov+' πρόσωπο της αφήγησης.');
+    if(it.notes.indexOf('χρόνος')>-1)
+      s.push('Ο ΧΡΟΝΟΣ: ο κανόνας του έργου είναι '+mainTense+' και εδώ έχεις '+it.tense+'. Ευθυγράμμισε — ή σκηνοθέτησε το πέρασμα με ρητή ένδειξη.');
+    else if(mainTense)
+      s.push('Κράτα τον χρόνο: '+mainTense+'.');
+    if(it.notes.indexOf('ρυθμός')>-1)
+      s.push('Ο ΡΥΘΜΟΣ: η μέση πρότασή σου εδώ είναι '+T(it.mean)+' λέξεις και το συμβόλαιο ζητά ≈'+T(ref)+
+             ' — '+(it.mean>ref?'σπάσε τις μακριές περιόδους σε δυο-τρεις με τελείες, χωρίς να χάσεις το νόημα.':'ένωσε τις πολύ κοφτές περιόδους σε περιόδους που αναπνέουν.'));
+    if(it.notes.indexOf('πνοή')>-1)
+      s.push('Η ΠΑΡΑΓΡΑΦΟΣ-ΑΝΑΠΝΟΗ: αυτό το κεφάλαιο δεν έχει καμία παράγραφο έξι προτάσεων. Γράψε τουλάχιστον μία, εκεί όπου η σκέψη απλώνεται — μία, όχι δέκα.');
+    if(it.notes.indexOf('διάλογος')>-1)
+      s.push('Ο ΔΙΑΛΟΓΟΣ: έχεις '+it.dialog+'% και το συμβόλαιο ζητά ≥'+LIMITS.dialogue+
+             '%. Δώσε τη σύγκρουση σε στιχομυθία με «» — χωρίς ετικέτα απόδοσης σε κάθε γραμμή, το πολύ '+LIMITS.tags+'% — αντί να την αφηγηθείς.');
+    s.push('ΤΑ ΟΝΟΜΑΤΑ: κράτα τα κλειδωμένα'+(names?(' ('+names+')'):'')+' με τις κλίσεις τους· κανένα νέο κύριο όνομα χωρίς λόγο.');
+    s.push('ΤΟ ΚΛΕΙΣΙΜΟ: τελείωσε με ολοκληρωμένη περίοδο (ποτέ κόμμα, ποτέ ανοιχτά «). Στο τέλος δώσε τη γραμμή συνέχειας σε μία σειρά: «ΚΑΤΑΣΤΑΣΗ: '+tag+' ολοκληρωμένο · επόμενη σκηνή: … · κλειδωμένα ονόματα: …».');
+    s.push('ΜΗΝ ξαναγράψεις ό,τι έχει ήδη ειπωθεί, μη δώσεις σύνοψη στην αρχή, μην αλλάξεις τα γεγονότα που έχουν καταγραφεί.');
+    L.push(s.join(' '));
+    L.push('');
+  });
+  const totalNeed=items.reduce((a,x)=>a+x.need,0);
+  if(totalNeed)
+    L.push('ΣΥΝΟΛΟ: λείπουν '+nf(totalNeed)+' λέξεις σε '+items.filter(x=>x.need>0).length+' ενότητα/ες. Το έργο μετρά '+nf(words)+' λέξεις αυτή τη στιγμή.');
+  return {text:L.join('\n'), items:items, words:words, totalNeed:totalNeed, ok:false};
+}
+let lastCont=null;
+/* ΤΟ ΠΑΝΕΛ ΤΩΝ ΟΔΗΓΙΩΝ: τυπώνει, αντιγράφει, κατεβάζει — με τα ίδια νούμερα της πύλης. */
+function renderContinuation(){
+  const el=document.getElementById('contOut');
+  const rawIn=(typeof editTextVal==='function')?editTextVal():'';
+  if(!el)return null;
+  if(!rawIn.trim()){
+    el.textContent='Επικόλλησε πρώτα το χειρόγραφο στο πεδίο «Καθαρογράφημα» — οι οδηγίες βγαίνουν από τις μετρήσεις του.';
+    el.style.display='';
+    toast('⚠ Χρειάζεται κείμενο'); return null;
+  }
+  const plan=continuationPlan(rawIn);
+  lastCont=plan;
+  el.textContent=plan.text;
+  el.style.display='';
+  ['contCopy','contDl','contSend'].forEach(id=>{ const b=document.getElementById(id); if(b)b.style.display=''; });
+  toast(plan.ok?'✓ Δεν εκκρεμεί συνέχεια':('➡ '+plan.items.length+' οδηγίες έτοιμες'));
+  return plan;
+}
+function contToPrompt(){
+  const rawIn=(typeof editTextVal==='function')?editTextVal():'';
+  const plan=lastCont||(rawIn.trim()?continuationPlan(rawIn):null);
+  if(!plan){ toast('⚠ Πρώτα «Οδηγίες συνέχειας ανά κεφάλαιο»'); return; }
+  if(plan.ok){ toast('✓ Δεν υπάρχει εκκρεμούσα συνέχεια — τίποτα να σταλεί'); return; }
+  const el=document.getElementById('editText'); if(!el)return;
+  if(el.value.indexOf('[ΣΥΝΕΧΕΙΑ: ΟΔΗΓΙΕΣ ΑΝΑ ΚΕΦΑΛΑΙΟ]')>-1){ toast('⚠ Υπάρχουν ήδη — σβήσε τις παλιές πρώτα'); return; }
+  const block='\n\n[ΣΥΝΕΧΕΙΑ: ΟΔΗΓΙΕΣ ΑΝΑ ΚΕΦΑΛΑΙΟ]\n'+plan.items.map((it,i)=>
+    (i+1)+'. '+it.label+' — λείπουν '+Number(it.need).toLocaleString('el-GR')+' λέξεις ('+it.words+'/'+it.target+
+    (it.notes.length?(', χρειάζεται: '+it.notes.join(' · ')):'')+')').join('\n')+
+    '\n[ΤΕΛΟΣ ΟΔΗΓΙΩΝ — δούλεψε ένα κεφάλαιο τη φορά, με το πλήρες μπλοκ του]';
+  el.value=el.value.replace(/\s+$/,'')+block;
+  toast('➡ Οι οδηγίες μπήκαν στο τέλος του κειμένου');
 }
 function gateVerdictText(v){ return v==='block'?'ΔΕΝ ΠΕΡΝΑ':(v==='warn'?'ΠΕΡΝΑ ΜΕ ΠΡΟΣΟΧΗ':'ΠΕΡΝΑ'); }
 
