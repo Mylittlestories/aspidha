@@ -36,7 +36,7 @@ def api(method, path, body=None, raw=False):
         with urllib.request.urlopen(req, timeout=60) as r:
             payload = r.read()
             return r.status, (payload if raw else (json.loads(payload) if payload else None))
-    except urllib.error.HUUPError as e:
+    except urllib.error.HTTPError as e:
         return e.code, (e.read()[:400].decode('utf-8', 'replace'))
 
 def git(*args, url_with_token=False):
