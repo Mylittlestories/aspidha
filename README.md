@@ -115,7 +115,7 @@ cd aspidha && xdg-open index.html      # macOS: open index.html
 
 ## Γιατί να το εμπιστευτείς
 
-- **532 έλεγχοι, 0 αποτυχίες, σε 48 ενότητες.** Η σουίτα ανάπτυξης (`rev.js`) ελέγχει τη
+- **534 έλεγχοι, 0 αποτυχίες, σε 48 ενότητες.** Η σουίτα ανάπτυξης (`rev.js`) ελέγχει τη
   συμπεριφορά του εργαλείου σε εικονικό περιβάλλον: ριπές σφυρηλάτησης, όρια προϋπολογισμού,
   καταπόνηση με γεμάτο λογιστήριο, ψευδο-θετικά του ελέγχου κειμένου, συμβόλαιο ονομάτων,
   τυπογραφία — και δύο ενότητες που δοκιμάζουν **χειρόγραφα που ξέρουμε την αλήθεια τους**:
@@ -177,7 +177,7 @@ download `index.html` and open it. Written for Greek orthography and morphology 
 shift, punctuation). Text and interface are in Greek.
 
 - Live: <https://Mylittlestories.github.io/aspidha/> · Windows/macOS/Linux · any modern browser
-- Verified: 532 development checks, 0 failures · 29 structural checks in CI
+- Verified: 534 development checks, 0 failures · 29 structural checks in CI
 - License: MIT © 2026 George Derventlis
 
 ---

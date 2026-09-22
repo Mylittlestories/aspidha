@@ -2,7 +2,7 @@
   ══════════════════════════════════════════════════════════════════════════════════
   🛡️  ΑΣΠΙΔΑ — Bulletproof Prompt Forge · Έκδοση v5.4  ·  build SS  ·  2026-09-22
   ──────────────────────────────────────────────────────────────────────────────────
-  Επαλήθευση κατασκευής: 532 έλεγχοι, 0 αποτυχίες (σουίτα `rev.js`, 48 ενότητες)
+  Επαλήθευση κατασκευής: 534 έλεγχοι, 0 αποτυχίες (σουίτα `rev.js`, 48 ενότητες)
   Μονό αρχείο · χωρίς εξωτερικές εξαρτήσεις · δουλειά χωρίς σύνδεση
   Σήμα: ΧΡΥΣΗ ΑΣΠΙΔΑ με κομμένο Α και πένα γραφής — ΕΝΣΩΜΑΤΩΜΕΝΟ στο αρχείο σε πέντε μεγέθη
   (favicon 16/32, apple-touch 180, λογότυπο κεφαλίδας 192, manifest 192/512) ως PNG8· το σχήμα
@@ -1100,7 +1100,7 @@ function lenUnitText(){
   const k=lenKey(), u=LEN_UNIT[k]||['πράξεις','5'], n=parseInt(u[1],10);
   return u[1]+' '+u[0]+' × ≥'+Math.round((LEN_MIN[k]||3000)/n).toLocaleString('el-GR')+' λέξεις';
 }
-const APP_CHECKS='532';
+const APP_CHECKS='534';
 /* ΑΝΑΓΝΩΡΙΣΤΙΚΟ ΚΑΤΑΣΚΕΥΗΣ: αλλάζει με κάθε patch ώστε ο χρήστης να μπορεί να πει
    ΠΟΙΟ αρχείο βλέπει. Αν στην οθόνη του γράφει άλλο build, βλέπει παλιό HTML (cache). */
 const APP_BUILD='SS';
@@ -2038,8 +2038,15 @@ function manuscriptGate(rawIn){
 
   const words=rows.reduce((a,r)=>a+r.words,0);
   const verdict=blockers.length?'block':(warns.length?'warn':'ok');
+  /* ΜΕ ΠΟΙΟ ΜΕΤΡΟ ΚΡΙΘΗΚΕ: η πύλη δεν κρίνει ποτέ αόριστα. Ο στόχος ανά μονάδα βγαίνει από τη
+     φόρμα (μήκος ÷ αριθμός μονάδων) και ταξιδεύει μαζί με το αποτέλεσμα, ώστε ο συγγραφέας να
+     βλέπει «γιατί» ένα κεφάλαιο των 371 λέξεων βγήκε στο 25% — και να αλλάξει το μέτρο, αν
+     αυτό ήθελε, αντί να μπερδευτεί. */
+  const unit=(typeof lenUnitText==='function')?lenUnitText():'';
+  const per=(typeof editUnitTarget==='function')?editUnitTarget('ΚΕΦΑΛΑΙΟ'):0;
   return {verdict:verdict, blockers:blockers, warns:warns, passes:passes, rows:rows,
-          words:words, chapters:realChapters, cut:cut};
+          words:words, chapters:realChapters, cut:cut, target:per, targetNote:unit,
+          targetTotal:(typeof lenMinWords==='function')?lenMinWords():0};
 }
 function gateVerdictText(v){ return v==='block'?'ΔΕΝ ΠΕΡΝΑ':(v==='warn'?'ΠΕΡΝΑ ΜΕ ΠΡΟΣΟΧΗ':'ΠΕΡΝΑ'); }
 
@@ -2051,10 +2058,12 @@ function renderGate(){
   if(!rawIn.trim()){ el.innerHTML='<p class="hint">Επικόλλησε πρώτα το χειρόγραφο στο πεδίο «Καθαρογράφημα» — η πύλη διαβάζει από εκεί.</p>'; toast('⚠ Χρειάζεται κείμενο'); return; }
   const g=manuscriptGate(rawIn);
   lastGate=g;
+  const tgt=g.target?('στόχος '+g.target.toLocaleString('el-GR')+' λέξεις/μονάδα — από τη φόρμα: '+escTxt(g.targetNote||'')+' ('+g.targetTotal.toLocaleString('el-GR')+' λέξεις συνολικά)'):'';
   let h='<div class="gate-verdict gate-'+g.verdict+'">'+
         '<span class="big">'+(g.verdict==='block'?'⛔ ':g.verdict==='warn'?'⚠ ':'✅ ')+gateVerdictText(g.verdict)+'</span>'+
         '<span class="hint" style="margin:0">'+g.words.toLocaleString('el-GR')+' λέξεις · '+g.chapters+' κεφάλαια · '+
-        g.blockers.length+' μπλοκαριστικά · '+g.warns.length+' προειδοποιήσεις · '+g.passes.length+' επαληθεύσεις</span></div>';
+        g.blockers.length+' μπλοκαριστικά · '+g.warns.length+' προειδοποιήσεις · '+g.passes.length+' επαληθεύσεις</span></div>'+
+        (tgt?'<div class="hint" style="margin:-6px 0 10px">🎯 '+tgt+'. Αν ο στόχος δεν είναι αυτός που θέλεις, άλλαξε το «Μέγεθος / Φόρμα» στη Βάση και ξανατρέξε.</div>':'');
   const item=(x,cls,ic)=>'<div class="gate-item '+cls+'"><span class="ic">'+ic+'</span><div><b>'+x.t+'</b>'+(x.s?'<div class="hint" style="margin-top:3px">→ '+x.s+'</div>':'')+'</div></div>';
   if(g.blockers.length) h+=g.blockers.map(x=>item(x,'block','⛔')).join('');
   if(g.warns.length) h+=g.warns.map(t=>'<div class="gate-item warn"><span class="ic">⚠</span><div>'+t+'</div></div>').join('');
