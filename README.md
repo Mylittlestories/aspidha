@@ -52,6 +52,13 @@ what it is for.** The tool itself keeps writing Greek; what changed is everythin
   named "Aspidha" and reported the structure broken. The check now requires whitespace before `on…=`
   (73 real handlers, all implemented).
 
+- **A test that was a lottery, made deterministic.** The gate check that verifies an unknown name is
+  reported was picking its "unknown" from the same pool the tool draws names from: when the Name
+  Forge happened to lock that name at start-up, the gate *correctly* stayed silent (a locked name is
+  part of the contract) and the check failed — one run in seven. The fixture now uses a name that is
+  provably absent from the tool's pools, clears the locks first, and locks the other half of the same
+  rule: once the stranger is adopted, the warning goes quiet.
+
 ---
 
 ## What's new in v5.6
