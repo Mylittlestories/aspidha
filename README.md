@@ -3,7 +3,7 @@
 **v5.6 · build UU · 2026-09-22** — ένα αρχείο HTML (≈800 KB), φωτεινή διεπαφή, χωρίς σύνδεση, χωρίς εξαρτήσεις, χωρίς εγκατάσταση.
 
 [![Έκδοση](https://img.shields.io/badge/%CE%AD%CE%BA%CE%B4%CE%BF%CF%83%CE%B7-v5.6-d4af37)](https://github.com/Mylittlestories/aspidha/releases)
-[![Έλεγχοι](https://img.shields.io/badge/%CE%AD%CE%BB%CE%B5%CE%B3%CF%87%CE%BF%CE%B9-569%2F569%20%E2%9C%93-27ae60)](tools/verify.js)
+[![Έλεγχοι](https://img.shields.io/badge/%CE%AD%CE%BB%CE%B5%CE%B3%CF%87%CE%BF%CE%B9-571%2F571%20%E2%9C%93-27ae60)](tools/verify.js)
 [![Άδεια](https://img.shields.io/badge/%CE%AC%CE%B4%CE%B5%CE%B9%CE%B1-MIT-blue)](LICENSE)
 ![Ένα αρχείο](https://img.shields.io/badge/%CE%AD%CE%BD%CE%B1%20%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%BF-offline-8c7ae6)
 ![Γλώσσα](https://img.shields.io/badge/%CE%B3%CE%BB%CF%8E%CF%83%CF%83%CE%B1-%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC-e67e22)
@@ -171,7 +171,7 @@ cd aspidha && xdg-open index.html      # macOS: open index.html
 
 ## Γιατί να το εμπιστευτείς
 
-- **569 έλεγχοι, 0 αποτυχίες, σε 50 ενότητες.** Η σουίτα ανάπτυξης (`rev.js`) ελέγχει τη
+- **571 έλεγχοι, 0 αποτυχίες, σε 50 ενότητες.** Η σουίτα ανάπτυξης (`rev.js`) ελέγχει τη
   συμπεριφορά του εργαλείου σε εικονικό περιβάλλον: ριπές σφυρηλάτησης, όρια προϋπολογισμού,
   καταπόνηση με γεμάτο λογιστήριο, ψευδο-θετικά του ελέγχου κειμένου, συμβόλαιο ονομάτων,
   τυπογραφία — και δύο ενότητες που δοκιμάζουν **χειρόγραφα που ξέρουμε την αλήθεια τους**:
@@ -233,7 +233,7 @@ download `index.html` and open it. Written for Greek orthography and morphology 
 shift, punctuation). Text and interface are in Greek.
 
 - Live: <https://Mylittlestories.github.io/aspidha/> · Windows/macOS/Linux · any modern browser
-- Verified: 569 development checks, 0 failures · 29 structural checks in CI
+- Verified: 571 development checks, 0 failures · 29 structural checks in CI
 - License: MIT © 2026 George Derventlis
 
 ---
