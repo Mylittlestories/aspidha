@@ -62,9 +62,11 @@ git('push', '--force', 'https://github.com/%s.git' % REPO, 'refs/tags/v5.4', url
 print('══ 3. ΑΠΟΣΥΡΣΗ ΤΟΥ v28.0 ══')
 for tag in ['v28.0']:
     st, _ = api('DELETE', '/repos/%s/git/refs/tags/%s' % (REPO, tag))
-    print(('  ✓ ' if st in (204, 404) else '  ✗ ') + 'tag %s %s' % (tag, 'έφυγε' if st == 204 else ('δεν υπήρχε' if st == 404 else st)))
+    print(('  ✓ ' if st in (204, 404, 422) else '  ✗ ') + 'tag %s %s' % (tag, 'έφυγε' if st == 204 else ('δεν υπήρχε πια' if st in (404, 422) else st)))
 st, rels = api('GET', '/repos/%s/releases?per_page=30' % REPO)
-old = [r for r in (rels if isinstance(rels, list) else []) if r.get('tag_name') == 'v28.0']
+if not isinstance(rels, list):                       # το GET μπορεί να αποτύχει σε νέο token: δεν σταματάμε γι' αυτό
+    print('  ⚠ δεν διαβάστηκε η λίστα releases (%s) — συνεχίζω' % str(rels)[:80]); rels = []
+old = [r for r in rels if r.get('tag_name') == 'v28.0']
 for r in old:
     st, _ = api('DELETE', '/repos/%s/releases/%s' % (REPO, r['id']))
     print(('  ✓ ' if st in (204, 404) else '  ✗ ') + 'release v28.0 (id %s) %s' % (r['id'], 'διαγράφηκε' if st == 204 else st))
