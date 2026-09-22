@@ -174,6 +174,21 @@ ok(/ΣΥΜΒΟΛΑΙΟ ΟΝΟΜΑΤΩΝ/.test(html), 'συμβόλαιο ονο�
 ok(/continuation|ΓΡΑΜΜΗ ΣΥΝΕΧΕΙΑΣ|γραμμή συνέχειας/i.test(html), 'γραμμή συνέχειας: το έργο συνεχίζεται χωρίς επανεκκίνηση');
 ok(html.indexOf('__adopting') > -1, 'υιοθέτηση ονομάτων: ό,τι υιοθετεί ο χρήστης δεν σβήνεται από την επόμενη κλήρωση');
 
+/* ── 5. ΔΙΓΛΩΣΣΙΑ: ΤΟ README ΜΙΛΑ ΣΕ ΟΛΟΥΣ — ΚΑΙ ΔΕΝ ΞΕΦΕΥΓΕΙ ΑΠΟ ΤΗΝ ΕΚΔΟΣΗ ──
+   Το εργαλείο είναι ελληνικό· το αποθετήριο όμως το διαβάζει όλος ο κόσμος. Το κύριο README
+   είναι αγγλικά, το ελληνικό σώζεται δίπλα του, και τα δύο δεν επιτρέπεται να ξεμείνουν σε
+   παλιά έκδοση: η τεκμηρίωση δηλώνει ό,τι δηλώνει και το αρχείο. */
+const rd = function (f) { try { return fs.readFileSync(path.join(ROOT, f), 'utf8'); } catch (e) { return ''; } };
+const en = rd('README.md'), el = rd('README.el.md'), chg = rd('CHANGELOG.md');
+ok(/Bulletproof Prompt Forge/.test(en) && /## What it is/.test(en) && !/## Τι είναι/.test(en),
+   'README.md: το κύριο README είναι στα αγγλικά (φαίνεται σε όλους)');
+ok(/ΑΣΠΙΔΑ/.test(el) && /## Τι είναι/.test(el) && /README\.md/.test(el),
+   'README.el.md: το ελληνικό README σώζεται, με σύνδεσμο προς το αγγλικό');
+ok(en.indexOf('v' + VER) > -1 && en.indexOf('build ' + BUILD) > -1 && chg.indexOf('## v' + VER) > -1,
+   'τεκμηρίωση: README και CHANGELOG δηλώνουν την έκδοση του αρχείου (v' + VER + ' · build ' + BUILD + ')');
+ok(/class="intro-en" lang="en"/.test(html),
+   'διγλωσσία: και η ίδια η σελίδα έχει αγγλική εισαγωγή για όσους δεν διαβάζουν ελληνικά');
+
 console.log('\n' + '─'.repeat(72));
 console.log(fail === 0 ? 'ΟΛΟΚΛΗΡΩΘΗΚΕ: ' + run + ' έλεγχοι, 0 αποτυχίες · ' + path.basename(FILE) + ' (' + (html.length / 1024).toFixed(0) + ' KB)'
                        : 'ΑΠΟΤΥΧΙΑ: ' + fail + ' από ' + run);

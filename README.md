@@ -1,251 +1,265 @@
-# 🛡️ ΑΣΠΙΔΑ — Bulletproof Prompt Forge
+# 🛡️ ΑΣΠΙΔΑ (Aspidha) — Bulletproof Prompt Forge
 
-**v5.6 · build UU · 2026-09-22** — ένα αρχείο HTML (≈800 KB), φωτεινή διεπαφή, χωρίς σύνδεση, χωρίς εξαρτήσεις, χωρίς εγκατάσταση.
+**v5.7 · build VV · 2026-09-22** — a single HTML file (≈800 KB), light interface, offline, no dependencies, no installation.
 
-[![Έκδοση](https://img.shields.io/badge/%CE%AD%CE%BA%CE%B4%CE%BF%CF%83%CE%B7-v5.6-d4af37)](https://github.com/Mylittlestories/aspidha/releases)
-[![Έλεγχοι](https://img.shields.io/badge/%CE%AD%CE%BB%CE%B5%CE%B3%CF%87%CE%BF%CE%B9-571%2F571%20%E2%9C%93-27ae60)](tools/verify.js)
-[![Άδεια](https://img.shields.io/badge/%CE%AC%CE%B4%CE%B5%CE%B9%CE%B1-MIT-blue)](LICENSE)
-![Ένα αρχείο](https://img.shields.io/badge/%CE%AD%CE%BD%CE%B1%20%CE%B1%CF%81%CF%87%CE%B5%CE%AF%CE%BF-offline-8c7ae6)
-![Γλώσσα](https://img.shields.io/badge/%CE%B3%CE%BB%CF%8E%CF%83%CF%83%CE%B1-%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC-e67e22)
+[![Version](https://img.shields.io/badge/version-v5.7-d4af37)](https://github.com/Mylittlestories/aspidha/releases)
+[![Checks](https://img.shields.io/badge/checks-574%2F574%20%E2%9C%93-27ae60)](tools/verify.js)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+![Single file](https://img.shields.io/badge/single%20file-offline-8c7ae6)
+![Language](https://img.shields.io/badge/prose%20language-Greek-e67e22)
 
 ![ΑΣΠΙΔΑ — Bulletproof Prompt Forge](assets/banner-1280.png)
 
----
-
-## Τι είναι
-
-Το **ΑΣΠΙΔΑ** δεν γράφει τη νουβέλα σου. Φτιάχνει το **prompt** που κάνει μια μηχανή (ChatGPT,
-Claude, Gemini, τοπικό μοντέλο) να τη γράψει **όπως τη θέλεις εσύ** — και ύστερα **ελέγχει το
-αποτέλεσμα με μέτρα, όχι με γούστο**.
-
-Είναι φτιαγμένο για ελληνικά: κλίσεις, τυπογραφία, ρυθμός, στιχομυθία, ονόματα που δεν
-θυμίζουν ταινία ή μυθιστόρημα. Δουλεύει εξ ολοκλήρου στον υπολογιστή σου — δεν στέλνει τίποτε
-πουθενά, δεν έχει τηλεμετρία, δεν ζητά λογαριασμό. Κατέβασέ το και δουλεύει για πάντα.
-
-**Πρόβλημα που λύνει:** οι μηχανές γράφουν όλες με τον ίδιο τρόπο — επίπεδες παράγραφοι, μέσος
-όρος, προβλέψιμες εικόνες, ονόματα-κλισέ, ξαφνικά «τέλος» στη μέση. Το ΑΣΠΙΔΑ βάζει στο prompt
-τα δεσμευτικά που λείπουν: **μετρημένο ύφος** (δείγμα, όχι περιγραφή), **συμβόλαιο ονομάτων**
-(κλειδωμένα, με τις κλίσεις τους), **ποσοστώσεις ρυθμού**, **γραμμή συνέχειας** για το επόμενο
-κεφάλαιο, και **τελικό αυτοέλεγχο**.
+**Ελληνικά:** [διάβασε το README στα ελληνικά](README.el.md) · **Live:** <https://Mylittlestories.github.io/aspidha/>
 
 ---
 
-## Τι νέο στη v5.6
+## What it is, and what it is for
 
-**Οι οδηγίες συνέχειας ανά κεφάλαιο βγαίνουν πλέον από το εργαλείο.** Αυτό που έμενε στον
-συγγραφέα — ποιο κεφάλαιο θέλει δουλειά, πόσες λέξεις λείπουν, με τι ρυθμό, τι πρέπει να μείνει
-όπως είναι — το μετρά η Πύλη Παραδοτέου και το γράφει εκείνη, σε ένα μπλοκ ανά κεφάλαιο:
+**Aspidha does not write your novel. It forges the prompt that makes an AI model — ChatGPT, Claude, Gemini, a local model — write it the way *you* want, and then measures the result with numbers instead of taste.**
 
-- **Κουμπί «📝 Οδηγίες συνέχειας ανά κεφάλαιο»** στην κάρτα της Πύλης. Διαβάζει το χειρόγραφο που
-  έχεις επικολλήσει και μετρά κάθε ενότητα χωριστά: λέξεις/στόχο, παράγραφο-αναπνοή, ρυθμό,
-  πρόσωπο, χρόνο, διάλογο, κύρια ονόματα.
-- **Ταξινόμηση κατά έλλειμμα.** Πρώτο το κεφάλαιο με τη μεγαλύτερη απόκλιση — το πρώτο κλικ
-  πιάνει το χειρότερο, όχι ό,τι τύχει.
-- **Κάθε μπλοκ στέκει μόνο του.** «Έχεις δώσει 183 λέξεις από τις 600. Γράψε ακόμη 417 λέξεις
-  ΤΗΣ ΙΔΙΑΣ ΣΚΗΝΗΣ — όχι σύνοψη, όχι νέα σκηνή, όχι επανάληψη.» Δίπλα: το πρόσωπο και ο χρόνος
-  της πλειονότητας του έργου (με οδηγία επιστροφής, αν η ενότητα ξέφυγε), η παράγραφος-αναπνοή
-  με τον κανόνα της, ο ρυθμός με το μέτρο του συμβολαίου (≈13,6 λέξεις/πρόταση) και το μετρημένο
-  νούμερο της ενότητας, το ποσοστό διαλόγου, τα κλειδωμένα ονόματα, ο κανόνας κλεισίματος.
-- **Γραμμή συνέχειας με την ταυτότητα της ενότητας.** «ΚΑΤΑΣΤΑΣΗ: **κεφάλαιο τρίτο**
-  ολοκληρωμένο · επόμενη σκηνή: …» — όχι η τελευταία λέξη του τίτλου, και με τους τόνους
-  σωστούς στα πεζά.
-- **Τρία κουμπιά:** αντίγραφο, κατέβασμα `.md`, και «➡ Μπλοκ οδηγιών στο κείμενο» που το ρίχνει
-  στο πεδίο του χειρογράφου — μία φορά (δεύτερο κλικ δεν διπλογράφει).
-- **Όταν όλα πιάσουν τον στόχο, το λέει.** «✓ ΔΕΝ ΕΚΚΡΕΜΕΙ ΣΥΝΕΧΕΙΑ» με τα κλειδωμένα ονόματα
-  υπενθύμιση — το εργαλείο δεν επινοεί δουλειά για να φανεί χρήσιμο.
+It is built for **Greek-language fiction**: inflections, Greek typography, sentence rhythm, dialogue,
+names that do not echo films or novels. It runs entirely on your machine — nothing is uploaded,
+there is no telemetry, no account, no network call of any kind. Download the file and it works
+forever.
+
+**The problem it solves:** language models write alike — flat paragraphs, average prose, predictable
+imagery, clichéd names, a sudden "the end" in the middle of a scene. Aspidha puts into the prompt
+the commitments that are usually missing: a **measured voice** (a real sample, not an adjective), a
+**name contract** (locked names with their Greek cases), **pace quotas** (≈13.6 words per sentence,
+45–55% of sentences under ten words), a **continuity line** that carries state into the next
+chapter, and a **final self-check** the model must produce before it stops.
+
+Who it is for: novelists and short-story writers working in Greek, editors, and anyone who wants a
+model to keep a book-length project consistent instead of drifting chapter by chapter.
 
 ---
 
-## Τι νέο στη v5.5
+## What's new in v5.7
 
-Δοκιμή σε **όλα τα ολοκληρωμένα έργα του συγγραφέα** (Η ΟΦΕΙΛΗ 18.299 λέξεις · Η ΑΠΟΔΕΙΞΗ 13.660 ·
-ΤΟ ΞΕΒΓΑΛΜΑ · ΤΟ ΑΚΟΥΣΜΑ · ΕΚΘΕΣΗ ΑΥΤΟΨΙΑΣ · κ.ά.) — και τα ευρήματα της δοκιμής μπήκαν μέσα στο
-εργαλείο, ώστε να μην ξαναγίνουν:
+**The repository and the app's introduction now speak English — so anyone can see what this is and
+what it is for.** The tool itself keeps writing Greek; what changed is everything around it:
 
-- **Το πρόσωπο αφήγησης μετριέται ΜΟΝΟ στην αφήγηση.** Ο διάλογος μιλά σε πρώτο πρόσωπο ακόμα κι
-  όταν η ιστορία είναι τρίτο («—Πού πας; —Πάω σπίτι»). Πριν, κάθε μυθιστόρημα με ζωντανή
-  στιχομυθία «άλλαζε πρόσωπο» — ψευδής καταγγελία. Δύο έργα κατηγορήθηκαν άδικα.
-- **Το πρόσωπο φαίνεται στην κατάληξη.** Στα ελληνικά το «δουλεύαμε» είναι πρώτο πληθυντικό χωρίς
-  αντωνυμία· το «γύρισε» τρίτο. Μετριούνται και οι καταλήξεις, με λίστα αποκλεισμού ώστε το
-  «οκτώ», το «λόγω» και η «αίθουσα» να μη διαβάζονται ως ρήματα.
-- **Ένα κεφαλαίο δεν είναι όνομα.** Το «Πήρα τους φακέλους» και το «Γύρισε και κοίταξε» έβγαιναν
-  πρόσωπα στο λογιστήριο (η ΟΦΕΙΛΗ είχε 25 «χαρακτήρες» που ήταν ρήματα). Τώρα όνομα είναι ό,τι
-  εμφανίζεται και **μέσα** στην πρόταση, όπου το κεφαλαίο δεν εξηγείται αλλιώς.
-- **Ένας άνθρωπος, ένα πρόσωπο.** «Ρίτσι», «Μπόουντεν» και «ΡΙΤΣΙ ΜΠΟΟΥΝΤΕΝ» είναι ο ίδιος — το
-  εργαλείο ενώνει τις μορφές και μετρά τις εμφανίσεις στο πρόσωπο, με τον σωστό τονισμό.
-- **ΜΕΡΗ, ΠΡΑΞΕΙΣ και ΤΟΜΟΙ μετριούνται ως ενότητες.** Το ΞΕΒΓΑΛΜΑ είχε πέντε ΜΕΡΗ και η πύλη
-  έλεγε «0 κεφάλαια», δηλαδή δεν έλεγχε τίποτα (ούτε μήκος, ούτε ρυθμό, ούτε πρόσωπο).
-- **Το τέλος κρίνεται στην ουρά.** Ασύμμετρα εισαγωγικά στη μέση δεν σημαίνουν «το έργο κόπηκε» —
-  δύο έργα τιμωρήθηκαν άδικα με μπλοκαριστικό.
-- **Τα εισαγωγικά ελέγχονται με μηχανή καταστάσεων**, ώστε να ξεχωρίζουν δύο διαφορετικά λάθη:
-  «κλείνει χωρίς άνοιγμα» (περιττό ») και «ανοίγει χωρίς κλείσιμο» (λείπει ») — καθένα με τη
-  γραμμή του. Η παράθεση που απλώνεται σε πολλές παραγράφους **δεν** κατηγορείται.
-- **Δύο νέοι έλεγχοι**: ο **ρυθμός που ξεφεύγει** από το συμβόλαιο (≈13,6 λέξεις/πρόταση) — δηλώνεται
-  ώστε είτε να διορθωθεί είτε να δηλωθεί ως επιλογή — και η **απότομη αλλαγή υφής στο φινάλε**
-  (στην ΑΠΟΔΕΙΞΗ ο διάλογος έπεφτε από 50–72% σε 11% στο τελευταίο κεφάλαιο).
-- **Καμία ψεύτικη επιτυχία**: «όλα τα κεφάλαια πιάνουν τον στόχο» λέγεται μόνο όταν υπάρχει έστω
-  μία ενότητα με στόχο· αλλιώς το εργαλείο ζητά κεφαλίδες για να μπορέσει να μετρήσει.
-- **Δύο πραγματικά λάθη βρέθηκαν στα έργα** (περιττό » στο ΑΚΟΥΣΜΑ, δύο ανοιχτές παραθέσεις στο
-  ΞΕΒΓΑΛΜΑ) — διορθώθηκαν στα διορθωμένα αρχεία του φακέλου `ΔΙΟΡΘΩΜΕΝΑ/`.
-
-- **Φωτεινή διεπαφή εξ ορισμού.** Χαρτί (#f6f4ef), λευκές κάρτες, μελάνι (#14203a) — και το
-  σήμα ξαναζωγραφισμένο στο ίδιο χαρτί, ώστε εικονίδιο, σελίδα και manifest να μη διαφωνούν.
-  Όποιος δουλεύει νύχτα πατά **🌙 Σκοτεινό**: η επιλογή γράφεται στη μνήμη του περιηγητή και
-  ξαναδιαβάζεται στο επόμενο άνοιγμα.
-- **Πύλη Παραδοτέου** (καρτέλα «Επιμέλεια»). Κολλάς το χειρόγραφο και παίρνεις, με μέτρα:
-  ΠΕΡΝΑ / ΠΕΡΝΑ ΜΕ ΠΡΟΣΟΧΗ / **ΔΕΝ ΠΕΡΝΑ**, με έναν λόγο για κάθε εύρημα, πίνακα ανά κεφάλαιο
-  (λέξεις, στόχος, μέσο μήκος πρότασης, παράγραφος έξι προτάσεων, διάλογος, πρόσωπο, χρόνος,
-  ονόματα), προειδοποιήσεις για αλλαγή χρόνου/προσώπου, ονόματα εκτός συμβολαίου, πρόσωπα που
-  χάνονται, και ανοιχτό τέλος. Ένα κλικ γυρίζει τα ευρήματα **μέσα στο prompt** ως οδηγία
-  διόρθωσης· άλλο κλικ κατεβάζει την έκθεση σε Markdown.
-- **Διόρθωση που προστάτεψε κείμενο.** Το κόψιμο του πρωτοκόλλου σταματά πλέον εκεί που
-  τελειώνει το πρωτόκολλο: πριν, μια μέτρηση στη μέση του έργου έσβηνε από τη μέτρηση ό,τι
-  ακολουθούσε. Τώρα το επόμενο κεφάλαιο μετριέται ολόκληρο, και το πρωτόκολλο που βρέθηκε μέσα
-  στο σώμα δηλώνεται ως προειδοποίηση — δεν κρύβεται και δεν σβήνει τίποτε.
-- **Η σειρά έκδοσης επιστρέφει στο 5.x.** Η αρίθμηση «v28.0» αποσύρεται· η v5.4 είναι η επόμενη
-  της v5.3. Το αρχείο δεν αναφέρει κανένα άλλο πρόγραμμα — ο έλεγχος «ανεξαρτησία» το
-  επαληθεύει σε κάθε push.
+- **`README.md` is now in English** (this file), and the Greek original is preserved as
+  [`README.el.md`](README.el.md), with links between the two.
+- **The app's introduction is bilingual.** The page description and the social preview (og/Twitter)
+  start in English, and the header carries one short English line — *"A single-file, offline studio
+  that forges the prompt which makes any AI model write your novel the way you want — then measures
+  what came back: pace, narrative person, dialogue, names, continuity."* The interface and the
+  prompts themselves remain Greek: the tool is built for Greek prose.
+- **A false positive found and closed while doing this.** The structural check that verifies every
+  `onclick` handler has an implementation read the new `content="Aspidha (…)"` meta tag as a handler
+  named "Aspidha" and reported the structure broken. The check now requires whitespace before `on…=`
+  (73 real handlers, all implemented).
 
 ---
 
-## Γρήγορη εκκίνηση
+## What's new in v5.6
 
-**1. Άνοιξέ το τώρα** — <https://Mylittlestories.github.io/aspidha/> (GitHub Pages).
+**The per-chapter continuation instructions are now produced by the tool itself.** What used to be
+the writer's job — which chapter needs work, how many words are missing, at what pace, what must
+stay exactly as it is — is measured by the Delivery Gate and written out for you, one block per
+chapter:
 
-**2. Κατέβασέ το** — πάρε το [`index.html`](index.html) (ή το ίδιο αρχείο ως
-[`writing-prompt-generator.html`](writing-prompt-generator.html)) και άνοιξέ το με διπλό κλικ.
-Δεν χρειάζεται διακομιστής, ούτε internet: το αρχείο είναι αυτοτελές.
+- **Button "📝 Per-chapter continuation instructions"** in the Delivery Gate card. It reads the
+  manuscript you pasted and measures every unit separately: words vs. target, the six-sentence
+  breathing paragraph, pace, narrative person, tense, dialogue share, proper names.
+- **Sorted by shortfall.** The chapter that is furthest off comes first — one click catches the
+  worst, not a random one.
+- **Every block stands alone.** "You have delivered 183 of 600 words. Write 417 more words of the
+  SAME SCENE — not a summary, not a new scene, not a repetition." Alongside it: the majority person
+  and tense of the work (with an instruction to return, if the unit drifted), the breathing
+  paragraph with its rule, the pace target (≈13.6 words/sentence) together with the unit's measured
+  figure, the dialogue percentage, the locked names, and the closing rule.
+- **Continuity line with the unit's own identity.** `STATUS: **chapter three** complete · next
+  scene: …` — not the last word of the title, and with Greek accents correct in lower case.
+- **Three buttons:** copy, download `.md`, and "send instructions block into the manuscript field" —
+  inserted once (a second click will not duplicate it).
+- **When everything hits the target, it says so.** "✓ NO CONTINUATION PENDING", with the locked
+  names as a reminder — the tool does not invent work to look useful.
 
-**3. Από το αποθετήριο**
+---
+
+## What's new in v5.5
+
+Tested against **every completed work of the author** (Η ΟΦΕΙΛΗ 18,299 words · Η ΑΠΟΔΕΙΞΗ 13,660 ·
+ΤΟ ΞΕΒΓΑΛΜΑ · ΤΟ ΑΚΟΥΣΜΑ · ΕΚΘΕΣΗ ΑΥΤΟΨΙΑΣ · and more) — and every finding went back into the
+tool so that it cannot happen again:
+
+- **Narrative person is measured in narration only.** Dialogue speaks in the first person even when
+  the story is in the third ("—Where are you going? —Home"). Before, any novel with live dialogue
+  was reported as "shifting person" — a false accusation. Two works were wrongly blamed.
+- **Person shows in the ending.** In Greek, "δουλεύαμε" is first person plural without a pronoun;
+  "γύρισε" is third. Verb endings are now counted, with a stop-list so that "οκτώ", "λόγω" and
+  "αίθουσα" are not read as verbs.
+- **A capital letter is not a name.** "Πήρα τους φακέλους" and "Γύρισε και κοίταξε" used to come out
+  as characters (Η ΟΦΕΙΛΗ had 25 "characters" that were verbs). A name is now something that also
+  appears **inside** a sentence, where a capital has no other explanation.
+- **One person, one entry.** "Ρίτσι", "Μπόουντεν" and "ΡΙΤΣΙ ΜΠΟΟΥΝΤΕΝ" are the same person — the
+  tool merges the forms and counts occurrences, with correct accents.
+- **PARTS, ACTS and VOLUMES count as units.** ΤΟ ΞΕΒΓΑΛΜΑ has five PARTS and the gate reported "0
+  chapters" — i.e. it checked nothing at all (not length, not pace, not person).
+- **The ending is judged at the tail.** Asymmetric quotation marks in the middle no longer mean "the
+  work was truncated" — two works were wrongly blocked.
+- **Quotation marks are checked with a state machine**, so two different mistakes stay distinct:
+  "closing without opening" (a stray ») and "opening without closing" (a missing »), each with its
+  line number. A quotation that spans several paragraphs is **not** flagged.
+- **Two new checks:** pace that drifts away from the contract (≈13.6 words/sentence) is reported, so
+  that it is either fixed or declared as a deliberate choice; and a **sudden change of texture in
+  the finale** (in Η ΑΠΟΔΕΙΞΗ dialogue fell from 50–72% to 11% in the last chapter).
+- **No fake success:** "all chapters hit the target" is said only when at least one unit with a
+  target exists; otherwise the tool asks for chapter headings so that it can measure at all.
+- **Two real mistakes were found in the works** (a stray » in ΤΟ ΑΚΟΥΣΜΑ, two unclosed quotations in
+  ΤΟ ΞΕΒΓΑΛΜΑ) — fixed in the corrected files under `ΔΙΟΡΘΩΜΕΝΑ/`.
+
+Also in v5.5:
+
+- **Light interface by default.** Paper (#f6f4ef), white cards, ink (#14203a) — and the logo redrawn
+  on the same paper, so icon, page and manifest agree. Night owls press **🌙 Dark**: the choice is
+  remembered by the browser.
+- **Delivery Gate** ("Copyedit" tab). Paste the manuscript and get a measured verdict: PASS / PASS
+  WITH CAUTION / **DOES NOT PASS**, with a reason for every finding, a per-chapter table (words,
+  target, mean sentence length, six-sentence paragraph, dialogue, person, tense, names), warnings
+  for tense/person shifts, names outside the contract, characters that fade, and an open ending.
+  One click turns the findings **into the prompt** as a fix instruction; another downloads the
+  report as Markdown.
+- **A fix that saved text.** Protocol trimming now stops exactly where the protocol ends: previously
+  a measurement pasted mid-manuscript removed everything after it from the count. Now the following
+  chapter is measured in full, and a protocol found inside the body is reported as a warning —
+  nothing is hidden, nothing is erased.
+- **Version numbering returns to 5.x.** The "v28.0" numbering is retired; v5.4 follows v5.3. The file
+  mentions no other program — the "independence" check verifies this on every push.
+
+---
+
+## Quick start
+
+**1. Open it now** — <https://Mylittlestories.github.io/aspidha/> (GitHub Pages).
+
+**2. Download it** — grab [`index.html`](index.html) (or the identical
+[`writing-prompt-generator.html`](writing-prompt-generator.html)) and double-click it. No server, no
+internet: the file is self-contained.
+
+**3. From the repository**
 
 ```bash
 git clone https://github.com/Mylittlestories/aspidha.git
-cd aspidha && xdg-open index.html      # macOS: open index.html
+cd aspidha && open index.html      # Linux: xdg-open index.html
 ```
 
-> Το αρχείο είναι **ένα** και αυτοτελές. Τα `assets/` υπάρχουν για το README, το og-image και
-> τα εικονίδια του αποθετηρίου — η εφαρμογή δεν τα ζητά ποτέ. Μπορείς να κρατήσεις μόνο το
-> `index.html` και να σβήσεις τα υπόλοιπα.
+> The app is **one** self-contained file. The `assets/` folder exists for the README, the og-image
+> and the repository icons — the app never requests them. You can keep only `index.html` and delete
+> everything else.
 
 ---
 
-## Τι κάνει — έξι καρτέλες
+## What it does — six tabs
 
-| Καρτέλα | Τι κάνει |
+| Tab | What it does |
 |---|---|
-| 🎛 **Σφυρηλάτηση Prompt** | Συνθέτει το πλήρες prompt: σύστημα, προδιαγραφές έργου, ονοματολογία, κόσμος, ύφος, πύλη ποιότητας, αντιανίχνευση, λογιστήριο συνέχειας. Τρεις βαθμίδες μεγέθους με βαθμονομημένη μέτρηση tokens. |
-| 🏷 **Name Forge** | Ονόματα που ταιριάζουν στο είδος και στο **πλαίσιο ονοματοδοσίας** που διαλέγεις — φωνολογία, κλίσεις, έλεγχος ομοιότητας με γνωστά έργα. Η κλήρωση αλλάζει σε κάθε πάτημα. |
-| 🔍 **Έλεγχος Κειμένου** | Μετρά το γραμμένο σου: ρυθμό και κατανομή μήκους πρότασης, παράγραφο-οβίδα, λέξεις-καπνό, επαναλήψεις, στιχομυθία χωρίς στήριγμα, ετυμολογία, δάνεια από το δείγμα, απόσταση από τη φωνή-στόχο. |
-| 🌍 **Κόσμος** | Δώδεκα στρώματα κόσμου (τόπος, τεχνολογία, θεσμοί, οικονομία, γλώσσα, μύθος…) με έλεγχο συνέπειας. |
-| 📚 **Λογιστήριο Συνέχειας** | Κεφάλαιο, σύνοψη, πρόσωπα με κλίσεις, αντικείμενα-κλειδιά, νήματα. Ό,τι δηλώσεις, το ξέρει το prompt κάθε φορά — και κόβεται **δηλωμένα**, ποτέ σιωπηλά. |
-| ✒️ **Επιμέλεια** | Καθαρογράφημα, επτά περάσματα επιμέλειας, φύλλο ύφους, έλεγχος συμβολαίου ονομάτων, φύλλο προόδου, εξαγωγή αναφοράς. |
+| 🎛 **Prompt Forge** | Composes the full prompt: system directive, project specifications, onomastics, world building, voice, quality gate, anti-detection, continuity ledger. Three size tiers with calibrated token counts. |
+| 🏷 **Name Forge** | Names that fit the genre and the **naming framework** you choose — phonology, Greek cases, similarity check against well-known works. The draw changes with every press. |
+| 🔍 **Text Audit** | Measures what you wrote: pace and sentence-length distribution, bullet paragraphs, smoke words, repetitions, unsupported dialogue, etymology, borrowings from the style sample, distance from the target voice. |
+| 🌍 **World** | Twelve layers of world building (place, technology, institutions, economy, language, myth…) with a consistency check. |
+| 📚 **Continuity Ledger** | Chapter, summary, characters with their cases, key objects, threads. Whatever you declare, the prompt knows it every time — and anything dropped is dropped **declared**, never silently. |
+| ✒️ **Copyedit** | Clean copy, seven copyedit passes, style sheet, name-contract check, progress sheet, report export. |
 
-Ενδιάμεσα: 🥁 ποσοστώσεις ρυθμού (13,6 λέξεις/πρόταση · 45–55% κάτω από 10) · 🎯 δάνεια από το
-χρυσό δείγμα · 💬 πειθαρχία διαλόγου (ετικέτες, κίνηση) · ✍️ ελληνική τυπογραφία · ♻️ ανακύκλωση
-φράσεων · 🪨 συμπαγές prompt (λιγότερα tokens, ίδια δέσμευση) · αντιγραφή με τρεις εφεδρείες ·
-μνήμη έργου · ιστορικό · σώμα κειμένων (αναζήτηση μες στο σώμα κειμένων σου).
-
----
-
-## Η πειθαρχία του πρωτοκόλλου
-
-- **Χρυσό δείγμα ύφους** — τρεις φωνές (στεγνό/εσωτερικό/κινηματικό), δύο-τρεις παράγραφοι
-  γραμμένες για το εργαλείο. Το prompt δεν **περιγράφει** το ύφος· το **δείχνει** και απαγορεύει
-  το δάνειο περιεχομένου. Όταν το περιθώριο στενεύει, το δείγμα **μαζεύει** σε μικρή δόση —
-  και μόνο σε ακραία περίπτωση φεύγει, δηλωμένα.
-- **Τρεις βαθμίδες** — `Πλήρες` ≈35.000 χαρ. (≈15.800 tokens o200k) · `Μεσαίο` ≈15.000 (≈6.800) ·
-  `Ελάχιστο` ≈7.700 (≈3.470). Ο επόπτης μεγέθους κόβει με σειρά προτεραιότητας (φάκελος →
-  λογιστήριο → συμβόλαιο λόγια → δείγμα τελευταίο) και **δηλώνει** τι έκοψε.
-- **Συμβόλαιο ονομάτων** — όσα κλειδώνεις μένουν, με όλες τις πτώσεις· ό,τι άλλο κύριο όνομα
-  απαγορεύεται. Το εργαλείο μπορεί να **υιοθετήσει** τα ονόματα που βρήκε στο κείμενό σου με
-  ένα κλικ, και δεν τα σβήνει η επόμενη κλήρωση.
-- **Γραμμή συνέχειας** — το τέλος κάθε κεφαλαίου μεταφέρει κατάσταση, τελευταία περίοδο και
-  επόμενη σκηνή: το επόμενο κεφάλαιο ξεκινά χωρίς επανεκκίνηση και χωρίς κύκλους.
-- **Μέτρηση έξω από το κείμενο** — η μέτρηση λέξεων ζητείται κάτω από δική της ένδειξη, με κενή
-  γραμμή, ώστε να μη μπει ποτέ μέσα στο χειρόγραφο.
-- **Πύλη Παραδοτέου** — το τελευταίο φίλτρο πριν από τον εκδότη: μέτρα ανά κεφάλαιο, συμπέρασμα
-  με λόγο, και οδηγία διόρθωσης που γυρίζει στο prompt με ένα κλικ.
-- **Φως ή σκοτάδι** — φωτεινή διεπαφή εξ ορισμού (χαρτί), σκούρη με ένα πάτημα, με μνήμη.
+In between: 🥁 pace quotas (13.6 words/sentence · 45–55% under 10) · 🎯 borrowings from the golden
+sample · 💬 dialogue discipline (tags, movement) · ✍️ Greek typography · ♻️ phrase recycling · 🪨
+compact prompt (fewer tokens, same commitment) · copy with three fallbacks · project memory ·
+history · your own text corpus with search.
 
 ---
 
-## Γιατί να το εμπιστευτείς
+## The discipline of the protocol
 
-- **571 έλεγχοι, 0 αποτυχίες, σε 50 ενότητες.** Η σουίτα ανάπτυξης (`rev.js`) ελέγχει τη
-  συμπεριφορά του εργαλείου σε εικονικό περιβάλλον: ριπές σφυρηλάτησης, όρια προϋπολογισμού,
-  καταπόνηση με γεμάτο λογιστήριο, ψευδο-θετικά του ελέγχου κειμένου, συμβόλαιο ονομάτων,
-  τυπογραφία — και δύο ενότητες που δοκιμάζουν **χειρόγραφα που ξέρουμε την αλήθεια τους**:
-  ένα καθαρό τρίπτυχο κεφαλαίων (περνά, με 8 επαληθεύσεις) και ένα χαλασμένο (κοντό κεφάλαιο,
-  αλλαγή χρόνου, χωρίς παράγραφο-αναπνοή, κομμένη φράση) που **δεν περνά**.
-- **Ο έλεγχος δεν λέει ψέματα.** Κάθε εύρημα του «Ελέγχου Κειμένου» έχει μετρημένο δείκτη και
-  παράδειγμα· ό,τι δεν στέκει, το κυνήγησα και το έκλεισα (ψευδή «εκτός συμβολαίου», «παράγραφος
-  χωρίς τελική στίξη» σε εισαγωγές με «:», ετυμολογία με άρνηση, οβίδα/στακάτο μόνο στην αφήγηση).
-- **Τα pixel του σήματος μετριούνται.** Το CI αποκωδικοποιεί τα ενσωματωμένα PNG, ελέγχει
-  διαστάσεις και ότι το χρυσό σχήμα υπάρχει στα 16/32/192 px — δεν «περνά» άδειο εικονίδιο.
-- **Καμία φόρτωση από το δίκτυο.** Ένα `href` προς αυτό το αποθετήριο είναι σύνδεσμος· δεν είναι
-  εξάρτηση. Το CI το ελέγχει: μηδέν `src`, μηδέν stylesheet, μηδέν `@import`.
+- **Golden style sample** — three voices (dry / interior / cinematic), two or three paragraphs
+  written for the tool. The prompt does not **describe** the style; it **shows** it and forbids
+  borrowing its content. When the budget tightens, the sample shrinks to a small dose — and only in
+  an extreme case does it leave, declared.
+- **Three tiers** — `Full` ≈35,000 chars (≈15,800 o200k tokens) · `Medium` ≈15,000 (≈6,800) ·
+  `Minimal` ≈7,700 (≈3,470). The size supervisor trims in priority order (dossier → ledger → name
+  contract → sample last) and **declares** what it cut.
+- **Name contract** — whatever you lock stays, in every case; any other proper name is forbidden.
+  The tool can **adopt** the names it found in your text with one click, and the next draw does not
+  erase them.
+- **Continuity line** — the end of every chapter carries state, last sentence and next scene: the
+  following chapter starts without a restart and without loops.
+- **Measurement outside the text** — the word count is requested under its own label, with a blank
+  line, so that it never ends up inside the manuscript.
+- **Delivery Gate** — the last filter before the publisher: per-chapter measures, a verdict with a
+  reason, and a fix instruction that returns to the prompt with one click.
+- **Light or dark** — light by default (paper), dark with one press, remembered.
 
-Τρέξε τους ελέγχους μόνος σου:
+---
+
+## Why trust it
+
+- **574 checks, 0 failures, in 51 sections.** The development suite (`rev.js`) exercises the tool's
+  behaviour in a virtual environment: forge bursts, budget limits, stress with a full ledger,
+  false positives in the text audit, name contract, typography — plus two sections that test
+  **manuscripts whose truth we know**: a clean three-chapter work (passes, with 8 verifications) and
+  a broken one (a short chapter, a tense shift, no breathing paragraph, a truncated clause) that
+  **does not pass**.
+- **The audit does not lie.** Every finding of the Text Audit carries a measured figure and an
+  example; anything that did not hold up was hunted down and closed (false "outside contract",
+  "paragraph without final punctuation" in introductions ending with ":", etymology with negation,
+  bullet/staccato flagged in narration only).
+- **The logo's pixels are measured.** CI decodes the embedded PNGs, checks dimensions, and verifies
+  that the golden shape exists at 16/32/192 px — it will not pass an empty icon.
+- **No network loads.** An `href` pointing at this repository is a link, not a dependency. CI checks
+  it too: zero `src`, zero stylesheets, zero `@import`.
+
+Run the checks yourself:
 
 ```bash
-node tools/verify.js            # 29 δομικοί έλεγχοι (χωρίς εξαρτήσεις)
+node tools/verify.js            # 33 structural checks (no dependencies)
 ```
 
 ---
 
-## Δομή αποθετηρίου
+## Repository layout
 
 ```
-index.html                     η εφαρμογή — ΟΛΟΚΛΗΡΟ το εργαλείο, ένα αρχείο, offline
-writing-prompt-generator.html  το ίδιο αρχείο (ιστορικό όνομα, ίδιο περιεχόμενο)
-manifest.webmanifest           για «προσθήκη στην αρχική» όταν σερβίρεται ως ιστοσελίδα
-assets/                        το σήμα (SVG + PNG 16/32/180/192/512), banner, og-image
-tools/verify.js                δομικός έλεγχος (29 έλεγχοι) — τρέχει στο CI
-.github/workflows/verify.yml   CI: έλεγχος σε κάθε push
-CHANGELOG.md                   τι άλλαξε, έκδοση προς έκδοση
+index.html                     the app — the WHOLE tool, one file, offline
+writing-prompt-generator.html  the same file (historical name, identical content)
+README.md                      this file (English)
+README.el.md                   the same README in Greek
+manifest.webmanifest           for "add to home screen" when served as a website
+assets/                        the logo (SVG + PNG 16/32/180/192/512), banner, og-image
+tools/verify.js                structural check (33 checks) — runs in CI
+.github/workflows/verify.yml   CI: checks on every push
+CHANGELOG.md                   what changed, version by version
 LICENSE                        MIT © 2026 George Derventlis
 ```
 
 ---
 
-## Όρια, ειλικρινά
+## Limits, honestly
 
-- **Είναι εργαλείο γραφής, όχι συγγραφέας.** Χωρίς δικό σου κείμενο, το prompt δίνει ένα καλό
-  πρώτο κεφάλαιο — όχι βιβλίο. Η αξία του φαίνεται στο δεύτερο κεφάλαιο και μετά, με λογιστήριο.
-- **Το «Ελάχιστο» είναι συμβιβασμός.** Ό,τι κόβεται για να χωρέσει σε 8k tokens δηλώνεται· σε
-  μικρό παράθυρο ζήτα **ένα κεφάλαιο τη φορά** (≥1.500 λέξεις), όπως το ζητά και το prompt.
-- **Οι μετρήσεις ύφους είναι στόχοι, όχι κριτήρια λογοτεχνίας.** Ρυθμός και ποσοστά βγαίνουν από
-  μετρημένα κείμενα· δεν αντικαθιστούν την κρίση σου — την ελευθερώνουν από τα μηχανικά λάθη.
-- **Το UI και τα κείμενα είναι στα ελληνικά.** Τα ονόματα των πεδίων είναι ελληνικοί όροι· δεν
-  υπάρχει αγγλική μετάφραση της διεπαφής.
-
----
-
-## English (short)
-
-**ΑΣΠΙΔΑ (Aspidha) — Bulletproof Prompt Forge** is a single-file, offline prompt studio for
-novelists writing in Greek. It forges a zero-drift prompt for any AI model (system directive,
-project spec, onomastics contract, world building, voice DNA, quality gate, anti-detection
-checks, continuity ledger), then **measures** what came back: sentence-length distribution,
-paragraph shape, repetition, dialogue discipline, etymology, leakage from the style sample, and
-distance from your target voice. No installation, no build step, no network calls, no telemetry —
-download `index.html` and open it. Written for Greek orthography and morphology (cases, accent
-shift, punctuation). Text and interface are in Greek.
-
-- Live: <https://Mylittlestories.github.io/aspidha/> · Windows/macOS/Linux · any modern browser
-- Verified: 571 development checks, 0 failures · 29 structural checks in CI
-- License: MIT © 2026 George Derventlis
+- **It is a writing tool, not a writer.** Without your own text, the prompt produces a good first
+  chapter — not a book. Its value shows from the second chapter onward, with a ledger.
+- **`Minimal` is a compromise.** Everything cut to fit in 8k tokens is declared; in a small window,
+  ask for **one chapter at a time** (≥1,500 words), exactly as the prompt itself instructs.
+- **Style measurements are targets, not literary criteria.** Pace and percentages come from measured
+  texts; they do not replace your judgement — they free it from mechanical mistakes.
+- **The interface and the prompts are in Greek.** The tool is built for Greek prose and its field
+  names are Greek terms; there is no English translation of the interface. (The English in this
+  README is here so that non-Greek speakers can see what the project is and what it is for.)
 
 ---
 
-## Άδεια & αναφορές
+## License & credits
 
-MIT — δες [LICENSE](LICENSE). Χρήση ελεύθερη, με αναφορά.
+MIT — see [LICENSE](LICENSE). Free to use, with attribution.
 
-Το εργαλείο χτίστηκε μελετώντας **τεχνική**, όχι αντιγράφοντας κείμενα: καταγραφές για ρυθμό
-πρότασης και ύφος, οδηγίες ονοματοδοσίας φανταστικών κόσμων, δοκίμια για τη σχέση ύφους και
-μηχανής, και μετρημένα ελληνικά κείμενα. Κανένα δάνειο δεν μπαίνει στο κείμενο του χρήστη: το
-χρυσό δείγμα είναι γραμμένο για το εργαλείο και το prompt απαγορεύει ρητά το δάνειό του.
+- Live: <https://Mylittlestories.github.io/aspidha/> · Windows / macOS / Linux · any modern browser
+- Verified: 574 development checks, 0 failures · 33 structural checks in CI
 
-Ερωτήσεις, ιδέες, λάθη: άνοιξε **issue** στο αποθετήριο. Αν βρεις ψευδές εύρημα στον έλεγχο
-κειμένου, γράψε το απόσπασμα — είναι ο μόνος τρόπος που διορθώνεται.
+The tool was built by studying **technique**, not by copying texts: accounts of sentence rhythm and
+voice, guides to naming imaginary worlds, essays on the relationship between style and machine, and
+measured Greek texts. No borrowing ends up in the user's text: the golden sample was written for the
+tool, and the prompt explicitly forbids borrowing from it.
+
+Questions, ideas, mistakes: open an **issue** in the repository. If you find a false finding in the
+text audit, paste the excerpt — that is the only way it gets fixed.
